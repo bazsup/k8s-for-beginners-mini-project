@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: odds-shopapi
+  namespace: odds-shop-dev
+spec:
+  selector:
+    app: odds-shopapi
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP

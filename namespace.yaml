@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: odds-shop-dev
+  labels:
+    name: odds-shop-dev
+    module: Namespace

@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: odds-shop-tls
+  namespace: odds-shop-dev
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  tls:
+    - secretName: odds-shop-tls
+  rules:
+    - host: '*.odds-shop.team'

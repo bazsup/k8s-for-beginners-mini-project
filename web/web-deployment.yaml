@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: odds-shopweb
+  namespace: odds-shop-dev
+spec:
+  selector:
+    matchLabels:
+      app: odds-shopweb
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: odds-shopweb
+    spec:
+      containers:
+      - name: odds-shopweb
+        image: ghcr.io/bazsup/odds-shopweb:v1
+        # volumeMounts:
+        # - mountPath: /cache
+        #   name: cache-volume
+      # volumes:
+      # - name: cache-volume
+      #   emptyDir: {}
